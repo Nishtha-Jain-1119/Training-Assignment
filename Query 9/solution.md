@@ -5,7 +5,7 @@ Solution
 SELECT 
   oh.order_id, 
   oh.STATUS_ID, 
-  COUNT(ORDER_ITEM_SEQ_ID) AS completed_items_count 
+  COUNT(ORDER_ITEM_SEQ_ID) AS canceled_items_count 
 FROM 
   order_header oh 
   JOIN order_item oi on oh.ORDER_ID = oi.ORDER_ID 
@@ -20,4 +20,5 @@ having
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/f99b1900-76cc-4be6-9b09-eaad1b00b695)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/55774865-b32b-4528-be23-d4e15ec03ae1)
+
