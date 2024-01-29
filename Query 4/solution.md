@@ -25,4 +25,5 @@ where
 
 ```
 Result
+
 ![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/f541daeb-5d24-439f-ac0f-5a1a1cfb1fb3)
