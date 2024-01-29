@@ -60,3 +60,5 @@ where
 
 Result
 ![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/13471a99-1eda-445d-999e-b6dd3946f998)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/1181ac2e-63ea-4a58-8c70-1c158e360079)
+
