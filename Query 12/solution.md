@@ -1,6 +1,6 @@
 Get all the appeasements in July month.
-a. How do we differentiate between returns and appeasements?
-b. Get all the below fields 
+1. How do we differentiate between returns and appeasements?
+2. Get all the below fields 
 - RETURN_ID
 - ENTRY_DATE 
 - RETURN_ADJUSTMENT_TYPE_ID
