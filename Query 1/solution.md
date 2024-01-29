@@ -41,3 +41,4 @@ where
   and oh.PRODUCT_STORE_ID = 'SM_STORE' 
   and pt.IS_PHYSICAL = 'Y';
 ```
+![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/7422f2e8-88e1-4e60-ae43-e99ff8fa6264)
