@@ -19,4 +19,4 @@ where
 ```
 
 Result
-![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/b9950045-e8d6-4134-b220-67fc3d057dad)
+![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/b5bb57d9-1dab-44be-8c35-3c608f63bacb)
