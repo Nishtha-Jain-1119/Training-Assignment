@@ -13,3 +13,29 @@ Get all the appeasements in July month.
 - ORDER_DATE 
 - RETURN_DATE
 - PRODUCT_STORE_ID
+
+Solution
+```SQL
+select 
+  rh.RETURN_ID, 
+  rh.ENTRY_DATE, 
+  ra.RETURN_ADJUSTMENT_TYPE_ID, 
+  ra.AMOUNT, 
+  ra.COMMENTS, 
+  ra.ORDER_ID, 
+  oh.ORDER_DATE, 
+  rh.RETURN_DATE, 
+  oh.PRODUCT_STORE_ID 
+from 
+  return_header rh 
+  join return_adjustment ra on rh.RETURN_ID = ra.RETURN_ID 
+  join order_header oh on ra.ORDER_ID = oh.ORDER_ID 
+where 
+  RETURN_ADJUSTMENT_TYPE_ID = 'APPEASEMENT' 
+  and rh.RETURN_DATE between '2023-07-01' 
+  and '2023-07-31';
+```
+
+Result
+
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/2e3fbd5b-32ba-4afe-9894-4313d15a1750)
