@@ -13,6 +13,7 @@ Fetch the following columns for completed order items for sales orders of SM_STO
  - ORDER_TYPE_ID
  - PRODUCT_STORE_ID 
 
+Solution
 ```SQL
 select 
   oh.ORDER_ID, 
@@ -41,4 +42,5 @@ where
   and oh.PRODUCT_STORE_ID = 'SM_STORE' 
   and pt.IS_PHYSICAL = 'Y';
 ```
+Result
 ![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/7422f2e8-88e1-4e60-ae43-e99ff8fa6264)
