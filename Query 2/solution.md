@@ -9,6 +9,7 @@ Fetch the following columns for completed return items of SM_STORE for ecom retu
 - ENTRY_DATE
 - RETURN_CHANNEL_ENUM_ID
 
+Solution
 ```SQL
 select 
   rh.RETURN_ID, 
@@ -31,3 +32,5 @@ where
   and rs.STATUS_ID = 'RETURN_COMPLETED' 
   and oh.PRODUCT_STORE_ID = 'SM_STORE';
 ```
+Result
+![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/cc9dc72a-5759-48c5-a3c6-9daaa00c59ce)
