@@ -17,6 +17,6 @@ where
   and ocm.CONTACT_MECH_PURPOSE_TYPE_ID = 'SHIPPING_LOCATION';
 
 ```
-
 Result
+
 ![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/b5bb57d9-1dab-44be-8c35-3c608f63bacb)
