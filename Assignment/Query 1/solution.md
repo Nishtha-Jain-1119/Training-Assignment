@@ -1,5 +1,5 @@
  1. How many single-item orders were fulfilled from warehouses in the last month?
-<br>
+
 Query
 ```SQL
 select 
@@ -24,7 +24,6 @@ group by
   ORDER_ID 
 having 
   item_count = 1;
-
 ```
 Result
 
