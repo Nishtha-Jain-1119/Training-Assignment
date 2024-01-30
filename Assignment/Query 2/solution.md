@@ -21,3 +21,5 @@ where
 Result
 
 ![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/9e25444d-03bd-487a-afd8-4d4553c906b7)
+
+Note: Count of orders shipped is - 7 but count of shipment for those orders is 12 because one order can have multiple shipments.
