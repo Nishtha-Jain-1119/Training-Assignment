@@ -7,7 +7,7 @@ select
   p.PRODUCT_TYPE_ID, 
   p.PRODUCT_NAME, 
   p.BRAND_NAME, 
-  count(oi.PRODUCT_ID) as product_cnt 
+  sum(oi.QUANTITY)  as product_cnt 
 from 
   order_contact_mech ocm 
   join order_item oi on oi.ORDER_ID = ocm.ORDER_ID 
