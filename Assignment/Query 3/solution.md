@@ -3,7 +3,7 @@
 Query
 ```SQL
 select 
-  count(s.SHIPMENT_ID) as SHIPPED_ORDERS_COUNT 
+  count(s.PRIMARY_ORDER_ID) as SHIPPED_ORDERS_COUNT 
 from 
   order_item_ship_group oisg 
   join facility f on f.FACILITY_ID = oisg.FACILITY_ID 
