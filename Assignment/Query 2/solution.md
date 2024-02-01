@@ -3,7 +3,7 @@
 Query
 ```SQL
 select 
-  count(s.SHIPMENT_ID) as SHIPPED_ORDERS_COUNT 
+  count(distinct s.PRIMARY_ORDER_ID) as SHIPPED_ORDERS_COUNT 
 from 
   order_item_ship_group oisg 
   join facility f on f.FACILITY_ID = oisg.FACILITY_ID 
@@ -20,6 +20,9 @@ where
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/9e25444d-03bd-487a-afd8-4d4553c906b7)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/436dff83-6ad6-4b08-b77e-2e80e83d43ad)
+
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/cec9c57d-5eb1-4e86-a444-86facde5be40)
+
 
 Note: Count of orders shipped is - 7 but count of shipment for those orders is 12 because one order can have multiple shipments.
