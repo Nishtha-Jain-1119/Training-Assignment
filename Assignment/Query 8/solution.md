@@ -3,7 +3,7 @@
 Query
 ```SQL
 select 
-  tt.order_id 
+ count(tt.order_id) as order_count
 from 
   (
     select 
@@ -23,5 +23,7 @@ where
 ```
 
 Result
+
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/f927492f-13da-4284-ac26-027eef0dc8b1)
 
 ![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/998179be-7ec2-48ef-bf0f-bc17fc8c2564)
