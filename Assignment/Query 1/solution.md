@@ -33,4 +33,6 @@ Result
 
 ![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/592e6eee-d0fd-4e32-a2cc-38fec23115c8)
 
+Inner Query Result
+
 ![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/0f24ef3b-5198-4ac2-a0a1-ea8c6c93ed31)
