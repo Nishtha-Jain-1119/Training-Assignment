@@ -21,7 +21,8 @@ from
 where 
   oh.STATUS_ID = 'ORDER_CREATED' 
   and oh.ORDER_TYPE_ID = 'SALES_ORDER' 
-  and oi.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_NAME';
+  and oi.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_NAME'
+  and (oi.THRU_DATE is null or oi.THRU_DATE > curdate());
 
 ```
 Result
