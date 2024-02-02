@@ -25,9 +25,12 @@ where
     os.STATUS_DATETIME between '2023-07-01' 
     and '2023-07-31'
   ) 
-  and oid.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_ID' and gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID';
+  and oid.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_ID' and gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID'
+  and (gi.THRU_DATE is null or gi.THRU_DATE > curdate())
+  and (oid.THRU_DATE  is null or oid.THRU_DATE > curdate());
+
 ```
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/7a55ebcd-6acc-49f5-a3a2-d6ad396de2c3)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/7d3c9ab0-e75c-473d-8df4-84f2882832e3)
