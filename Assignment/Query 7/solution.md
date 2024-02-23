@@ -4,7 +4,9 @@ Solution
 ```SQL
 select 
   oi.ORDER_ID, 
-  oi.ORDER_ITEM_SEQ_ID, 
+  oi.ORDER_ITEM_SEQ_ID,
+  oi.PRODUCT_ID,
+  p.PRODUCT_NAME,
   pt.IS_PHYSICAL, 
   os.STATUS_ID, 
   oh.ORDER_DATE 
@@ -26,4 +28,4 @@ where
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/6475ca01-b74c-4feb-b6ce-5b04357b864a)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/4f3da532-9661-4b64-8612-f81b02b35039)
