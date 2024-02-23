@@ -5,7 +5,9 @@ Solution
 select 
   oi.ORDER_ID, 
   oi.ORDER_ITEM_SEQ_ID, 
-  oisg.SHIP_GROUP_SEQ_ID, 
+  oisg.SHIP_GROUP_SEQ_ID,
+  oi.PRODUCT_ID,
+  p.PRODUCT_NAME,
   f.FACILITY_ID, 
   f.FACILITY_TYPE_ID, 
   os.STATUS_ID, 
@@ -38,4 +40,6 @@ where
 ```
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/b68853b1-718f-478b-98e0-43327bcb9ebf)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/0440f7e6-4546-41db-8ad2-f541d5b3f3a9)
+
+
