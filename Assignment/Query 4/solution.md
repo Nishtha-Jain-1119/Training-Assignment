@@ -18,14 +18,19 @@ from
   order_header oh 
   join order_payment_preference opp on opp.ORDER_ID = oh.ORDER_ID 
   join payment_method_type pmt on opp.PAYMENT_METHOD_TYPE_ID = pmt.PAYMENT_METHOD_TYPE_ID 
-  join order_identification oi on oi.ORDER_ID = oh.ORDER_ID 
+  left join order_identification oi on (
+    oi.ORDER_ID = oh.ORDER_ID 
+    and oi.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_NAME' 
+    and (
+      oi.THRU_DATE is null 
+      or oi.THRU_DATE > curdate()
+    )
+  ) 
 where 
   oh.STATUS_ID = 'ORDER_CREATED' 
-  and oh.ORDER_TYPE_ID = 'SALES_ORDER' 
-  and oi.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_NAME'
-  and (oi.THRU_DATE is null or oi.THRU_DATE > curdate());
+  and oh.ORDER_TYPE_ID = 'SALES_ORDER';
 
 ```
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/SQL-Queries/assets/127538617/f541daeb-5d24-439f-ac0f-5a1a1cfb1fb3)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/e09ab5c1-dbd7-4b5f-98be-d2b01f6ee056)
