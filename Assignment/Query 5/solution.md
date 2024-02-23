@@ -17,20 +17,32 @@ from
     oi.order_id = os.ORDER_ID 
     and oi.ORDER_ITEM_SEQ_ID = os.ORDER_ITEM_SEQ_ID
   ) 
-  left join order_identification oid on oi.ORDER_ID = oid.ORDER_ID 
-  left join good_identification gi on gi.PRODUCT_ID = oi.PRODUCT_ID 
+  left join order_identification oid on (
+    oi.ORDER_ID = oid.ORDER_ID 
+    and (
+      oid.THRU_DATE is null 
+      or oid.THRU_DATE > curdate()
+    )
+  ) 
+  left join good_identification gi on (
+    gi.PRODUCT_ID = oi.PRODUCT_ID 
+    and (
+      gi.THRU_DATE is null 
+      or gi.THRU_DATE > curdate()
+    )
+  ) 
 where 
   os.STATUS_ID = 'ITEM_COMPLETED' 
   and (
-    os.STATUS_DATETIME between '2023-07-01' 
-    and '2023-07-31'
+    year(os.STATUS_DATETIME)= 2023 
+    and month(os.STATUS_DATETIME)= 7
   ) 
-  and oid.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_ID' and gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID'
-  and (gi.THRU_DATE is null or gi.THRU_DATE > curdate())
-  and (oid.THRU_DATE  is null or oid.THRU_DATE > curdate());
+  and oid.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_ID' 
+  and gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID';
+
 
 ```
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/7d3c9ab0-e75c-473d-8df4-84f2882832e3)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/ecff599e-0e1e-4e69-a546-92c2cff2224f)
