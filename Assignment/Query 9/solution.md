@@ -8,10 +8,9 @@ SELECT
   COUNT(ORDER_ITEM_SEQ_ID) AS canceled_items_count 
 FROM 
   order_header oh 
-  JOIN order_item oi on oh.ORDER_ID = oi.ORDER_ID 
-where 
-  oh.STATUS_ID = 'ORDER_APPROVED' 
-  AND oi.STATUS_ID = 'ITEM_CANCELLED' 
+  JOIN order_item oi on (oh.ORDER_ID = oi.ORDER_ID
+    AND oh.STATUS_ID = 'ORDER_APPROVED' 
+    AND oi.STATUS_ID = 'ITEM_CANCELLED')
 group by 
   ORDER_ID 
 having 
