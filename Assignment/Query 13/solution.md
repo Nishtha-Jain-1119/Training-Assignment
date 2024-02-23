@@ -48,6 +48,8 @@ where
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/c3f0bfaa-cf2d-432b-9867-7c55e77abe23)
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/70fbc3a7-6e6c-4376-bba2-defd45141a1d)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/67566249-cda6-4aca-a4f8-c5ba89e78137)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/752e72a9-93fa-49f1-80fa-7fd17489a70d)
+
+
 
