@@ -24,7 +24,7 @@ select
   oi.ORDER_ID, 
   p.PRODUCT_TYPE_ID, 
   oi.ORDER_ITEM_SEQ_ID as ORDER_LINE_ID, 
-  oh.EXTERNAL_ID, 
+  oi.EXTERNAL_ID, 
   oh.SALES_CHANNEL_ENUM_ID, 
   oi.QUANTITY, 
   oi.STATUS_ID as ITEM_STATUS, 
@@ -59,6 +59,8 @@ where
 ```
 
 Result
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/13471a99-1eda-445d-999e-b6dd3946f998)
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/1181ac2e-63ea-4a58-8c70-1c158e360079)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/2f41f3a9-6b78-47ae-bb0f-7d07e7eaad16)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/3c83a8da-9e78-417d-aea8-9eaf239549c5)
+
+
 
