@@ -1,5 +1,5 @@
-Orders brokered but not shipped:
-Identify orders that have been brokered (arranged or negotiated) but have not been shipped yet or shipment has not yet been created/initiated.
+10. Orders brokered but not shipped:
+    * Identify orders that have been brokered (arranged or negotiated) but have not been shipped yet or shipment has not yet been created/initiated.
 Solution:
 ```sql
 select 
