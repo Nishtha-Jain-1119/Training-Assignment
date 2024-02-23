@@ -19,13 +19,15 @@ from
   ) 
   left join order_identification oid on (
     oi.ORDER_ID = oid.ORDER_ID 
-    and (
+    and oid.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_ID' 
+    and(
       oid.THRU_DATE is null 
       or oid.THRU_DATE > curdate()
     )
   ) 
   left join good_identification gi on (
     gi.PRODUCT_ID = oi.PRODUCT_ID 
+    and gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID' 
     and (
       gi.THRU_DATE is null 
       or gi.THRU_DATE > curdate()
@@ -36,13 +38,10 @@ where
   and (
     year(os.STATUS_DATETIME)= 2023 
     and month(os.STATUS_DATETIME)= 7
-  ) 
-  and oid.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_ID' 
-  and gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID';
-
+  );
 
 ```
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/ecff599e-0e1e-4e69-a546-92c2cff2224f)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/3b8a6396-902c-46ea-b6dc-ef630238d094)
