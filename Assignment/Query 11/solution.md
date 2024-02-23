@@ -1,5 +1,5 @@
-11.Orders completed hourly:
-    * Analyze and present the distribution of completed orders on an hourly basis.
+11. Orders completed hourly
+      * Analyze and present the distribution of completed orders on an hourly basis.
 Solution:
 ```sql
 SELECT 
