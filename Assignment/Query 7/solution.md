@@ -4,7 +4,7 @@ Query
 ```SQL
 select 
   pa.CITY, 
-  count(rcm.RETURN_ID) as return_count 
+  count(distinct rcm.RETURN_ID) as return_count 
 from 
   return_contact_mech rcm 
   join postal_address pa on pa.CONTACT_MECH_ID = rcm.CONTACT_MECH_ID 
