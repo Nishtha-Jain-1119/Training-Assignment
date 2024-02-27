@@ -1,6 +1,22 @@
 2. Leading up to the New Year, what is the count of orders shipped from stores in the 25 days preceding the New Year?
 
-Query
+Query:
+
+**Query cost: 5163.57**
+```sql
+select 
+  count(distinct s.PRIMARY_ORDER_ID) as SHIPPED_ORDERS_COUNT 
+  from shipment s 
+  join facility f on f.FACILITY_ID = s.ORIGIN_FACILITY_ID
+  join facility_type ft on (f.FACILITY_TYPE_ID = ft.FACILITY_TYPE_ID and ft.PARENT_TYPE_ID = 'PHYSICAL_STORE')
+  join shipment_status ss on (ss.SHIPMENT_ID = s.SHIPMENT_ID and ss.STATUS_ID = 'SHIPMENT_SHIPPED')
+  where 
+  ss.STATUS_DATE >= '2024-01-01' - INTERVAL 25 day 
+  AND ss.STATUS_DATE < '2024-01-01';
+```
+Query with alternate approach
+
+**Query cost: 6203.63**
 ```SQL
 select 
   count(distinct s.PRIMARY_ORDER_ID) as SHIPPED_ORDERS_COUNT 
