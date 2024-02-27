@@ -3,16 +3,27 @@
 Query
 ```SQL
 select 
-  count(distinct or2.ORDER_ID) 
+  distinct oh.ORDER_ID 
 from 
-  order_role or2 
-  join party_contact_mech_purpose pcmp on or2.PARTY_ID = pcmp.PARTY_ID 
-  join postal_address pa on pa.CONTACT_MECH_ID = pcmp.CONTACT_MECH_ID 
+  order_header oh 
+  join order_role or2 on (
+    or2.ORDER_ID = oh.ORDER_ID 
+    and or2.ROLE_TYPE_ID = 'PLACING_CUSTOMER'
+  ) 
+  join party_contact_mech_purpose pcmp on (
+    or2.PARTY_ID = pcmp.PARTY_ID 
+    and pcmp.CONTACT_MECH_PURPOSE_TYPE_ID = 'SHIPPING_LOCATION'
+  ) 
+  join postal_address pa on (
+    pa.CONTACT_MECH_ID = pcmp.CONTACT_MECH_ID 
+    and pa.city = 'New York'
+  )
 where 
-  or2.ROLE_TYPE_ID = 'PLACING_CUSTOMER' 
-  and pcmp.CONTACT_MECH_PURPOSE_TYPE_ID = 'SHIPPING_LOCATION' 
-  and pa.city = 'New York';
+  oh.STATUS_ID != 'ORDER_CANCELLED' 
+  or oh.STATUS_ID != 'ORDER_REJECTED';
+
 ```
+**Query cost: 330.67**
 
 Result
 
