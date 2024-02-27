@@ -24,6 +24,6 @@ where
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/f927492f-13da-4284-ac26-027eef0dc8b1)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/df78212a-92ab-47e5-b007-0fdb7f8786c9)
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/998179be-7ec2-48ef-bf0f-bc17fc8c2564)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/d0aaa5f4-c65b-4d36-ae5f-4c28c00fc8e1)
