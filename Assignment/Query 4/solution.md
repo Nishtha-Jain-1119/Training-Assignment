@@ -34,3 +34,6 @@ where
 Result
 
 ![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/e09ab5c1-dbd7-4b5f-98be-d2b01f6ee056)
+
+>**Note**:
+When using a left outer join, orders with a null value for SHOPIFY_ORDER_NAME will also appear, as opposed to using inner join where only those with a value exist.
