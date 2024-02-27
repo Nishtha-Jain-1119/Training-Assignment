@@ -45,3 +45,6 @@ where
 Result
 
 ![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/3b8a6396-902c-46ea-b6dc-ef630238d094)
+
+>**Note**:
+Left outer join includes null values for SHOPIFY_ORDER_NAME and SHOPIFY_PRODUCT_ID, while inner join only shows values.
