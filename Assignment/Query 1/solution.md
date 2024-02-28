@@ -1,5 +1,6 @@
  1. How many single-item orders were fulfilled from warehouses in the last month?
-query
+
+Query:
 ```sql
 select 
   count(*) as ORDER_COUNT 
