@@ -18,7 +18,7 @@ from
   order_header oh 
   join order_payment_preference opp on opp.ORDER_ID = oh.ORDER_ID 
   join payment_method_type pmt on opp.PAYMENT_METHOD_TYPE_ID = pmt.PAYMENT_METHOD_TYPE_ID 
-  left join order_identification oi on (
+  join order_identification oi on (
     oi.ORDER_ID = oh.ORDER_ID 
     and oi.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_NAME' 
     and (
@@ -33,7 +33,8 @@ where
 ```
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/e09ab5c1-dbd7-4b5f-98be-d2b01f6ee056)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/d5b91c78-c74a-4719-950e-c166003f7fc0)
+
 
 >**Note**:
-When using a left outer join, orders with a null value for SHOPIFY_ORDER_NAME will also appear, as opposed to using inner join where only those with a value exist.
+When using inner join, only orders with SHOPIFY_ORDER_NAME will appear. Alternatively, left outer join will display orders without SHOPIFY_ORDER_NAME as well.
