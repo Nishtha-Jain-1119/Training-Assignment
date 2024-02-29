@@ -17,7 +17,7 @@ from
     oi.order_id = os.ORDER_ID 
     and oi.ORDER_ITEM_SEQ_ID = os.ORDER_ITEM_SEQ_ID
   ) 
-  left join order_identification oid on (
+  join order_identification oid on (
     oi.ORDER_ID = oid.ORDER_ID 
     and oid.ORDER_IDENTIFICATION_TYPE_ID = 'SHOPIFY_ORD_ID' 
     and(
@@ -25,7 +25,7 @@ from
       or oid.THRU_DATE > curdate()
     )
   ) 
-  left join good_identification gi on (
+  join good_identification gi on (
     gi.PRODUCT_ID = oi.PRODUCT_ID 
     and gi.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_ID' 
     and (
@@ -44,7 +44,7 @@ where
 
 Result
 
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/3b8a6396-902c-46ea-b6dc-ef630238d094)
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/4e9fa49a-38d7-4285-bf72-c79a3bd71ce8)
 
 >**Note**:
-Left outer join includes null values for SHOPIFY_ORDER_NAME and SHOPIFY_PRODUCT_ID, while inner join only shows values.
+When using inner join, only orders with SHOPIFY_ORDER_NAME and SHOPIFY_PRODUCT_ID will appear. Alternatively, left outer join will display orders without SHOPIFY_ORDER_NAME and SHOPIFY_PRODUCT_ID as well.
