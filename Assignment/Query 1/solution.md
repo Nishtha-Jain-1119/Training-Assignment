@@ -24,5 +24,5 @@ where
 
 ```
 Result
-![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/f24a713f-d056-424c-a1ab-3e85c41a55f7)
 
+![image](https://github.com/Nishtha-Jain-1119/Training-Assignment/assets/127538617/f24a713f-d056-424c-a1ab-3e85c41a55f7)
